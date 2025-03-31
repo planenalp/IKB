@@ -63,6 +63,10 @@ Public`（必选，否则没法正常创建）`
 
 Create repository
 
+## 2.3 小技巧
+熟悉、测试过程，可先创个备用版来实现，比如 `用户名.github.io` 作为主用，`用户名.github.io/test` 作为测试用
+并且作为测试用的 `用户名.github.io/test` 不建议绑定域名，因为类似 Cloudflare 小云朵等功能会导致更新延迟经常需要等一段时间才能刷新网页看到改的效果
+
 ---------------------------------------------------------------------------
 # 3. 初始化
 ## Settings - Pages
@@ -189,5 +193,6 @@ Actions - build Gmeek - Run workflow - Run workflow
 这个方式让我误解为通过 Issues 直接上传的图片同样会占用仓库的空间总容量，不过查了下相关说明似乎并不是
 - GitHub Issues 每创建一篇都会有一个从 #1 开始的独立的编号，删除后这个编号就会永久丢失，除非整个博客删掉重建，所以如果想让文章编号连续，可以通过修改这篇 Issue 替换掉就内容，而不是删掉，不过修改的话 Issue 底部也会有改名记录之类就是了
 - 假设 About 和 Link 分别是前两篇文章，且 config.json 从默认的 `"urlMode":"pinyin",` 改成了博客 URL 为更简洁的 `"urlMode":"issue",` 状态后，访问博客 `abc.com/post/1.html` 和 `abc.com/post/2.html` 都是 404，变成了 `abc.com/post/about.html` 和 `abc.com/post/link.html` 之后的文章都是从  `abc.com/post/3.html` 开始算
+
 
 
