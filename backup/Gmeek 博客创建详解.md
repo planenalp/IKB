@@ -17,16 +17,16 @@
 
 来到 https://github.com/Meekdai/Gmeek
 右上角 Fork - Create a fork
-Owner: 当前账号 / Repository name: Gmeek（默认即可）
-Description (optional): Gmeek is a Blog All in Github（默认即可）
-Copy the main branch only：取消打勾（非必要）
+Owner: `当前账号` / Repository name: `Gmeek`（默认即可）
+Description (optional): `Gmeek is a Blog All in Github`（默认即可）
+Copy the main branch only：`取消打勾`（非必要）
 Create fork
 
 来到 https://github.com/Meekdai/Gmeek-template
 右上角 Fork - Create a fork
-Owner: 当前账号 / Repository name: Gmeek-template（默认即可）
-Description (optional): Gmeek template repository（默认即可）
-Copy the main branch only：取消打勾（非必要）
+Owner: `当前账号` / Repository name: `Gmeek-template`（默认即可）
+Description (optional): `Gmeek template repository`（默认即可）
+Copy the main branch only：`取消打勾`（非必要）
 Create fork
 
 ## 1.2 Gmeek 和 Gmeek-template 分别是什么
@@ -42,23 +42,24 @@ Gmeek-template 用来方便创建博客的模板，创建完就不需要了，�
 
 ### Forked 状态手动创建
 Repositories - New
-Repository template: 用户名/Gmeek-template
+Repository template: `用户名/Gmeek-template`
 
 ## 2.2 设置仓库名
 Create a new repository
-Include all branches：打勾（非必要）
-Owner: 用户名 / Repository name: 用户名.github.io
+Include all branches：`打勾`（非必要）
+Owner: 用户名 / Repository name: `用户名.github.io`
+
 这里新手有个很容易误解的坑
-仓库名可以为任意名，但是只有使用“当前用户名.github.io”才能实现“https://当前用户名.github.io”的域名
+仓库名可以为任意名，但是只有使用 `当前用户名.github.io` 才能实现 `https://当前用户名.github.io` 的域名
 若 Repository name 直接用别的词，或者是别的域名
-比如“blog”或“不是用户名.github.io”或“abc.com”，都会被强行变成后缀导致
-最终域名变成 https://当前用户名.github.io/blog
-或 https://当前用户名.github.io/不是用户名.github.io
-或 https://当前用户名.github.io/abc.com
+比如 `blog` 或 `不是用户名.github.io` 或 `abc.com` ，都会被强行变成后缀导致
+最终域名变成 `https://当前用户名.github.io/blog`
+或 `https://当前用户名.github.io/不是用户名.github.io`
+或 `https://当前用户名.github.io/abc.com`
 
-Description (optional): 随便填或不填
+Description (optional): `随便填或不填`
 
-Public（必选，否则没法正常创建）
+Public`（必选，否则没法正常创建）`
 
 Create repository
 
@@ -70,9 +71,9 @@ Source
 Deploy from a branch 改为 GitHub Actions
 
 ## Issues - New issue
-Add a title: About
-Labels - 输入 about - Create new label: "about" - Enter
-文章内容：随便
+Add a title: `About`
+Labels - 输入 `about` - Create new label: "about" - Enter
+文章内容：`随便`
 Create
 
 ## Actions - All workflows
@@ -89,45 +90,46 @@ Create
 
 仓库名/.github/workflows/Gmeek.yml - 右上角 Edit this file
 
-git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;
+`git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;`
 改为
-git clone https://github.com/用户名/Gmeek.git /opt/Gmeek;
+`git clone https://github.com/用户名/Gmeek.git /opt/Gmeek;`
 
 Commit changes...
 
 Actions - build Gmeek - Run workflow - Run workflow
 
 观察 build Gmeek 能否顺利运行
-完成后浏览器按 F12 - 网络 - 停用缓存，然后输入当前域名 https://用户名.github.io 检查是否能正常访问，强烈建议之后每次都这样检查
+完成后浏览器按 F12 - 网络 - 停用缓存，然后输入当前域名 `https://用户名.github.io` 检查是否能正常访问，强烈建议之后每次都这样检查
 
 
 ## 4.2 指定自定义域名
 - 修改博客正式访问域名（非必要）
-官方教程：Managing a custom domain for your GitHub Pages site
-https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+官方教程：[Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+
 
 以 Cloudflare 为例，其它大同小异
-情况1和情况2的 DNS 记录本身并不冲突，可同时存在，实现 abc.com 和 blog.abc.com 分别指向两个不同仓库内的 GihHub Pages 博客
+情况1和情况2的 DNS 记录本身并不冲突，可同时存在，实现 `abc.com` 和 `blog.abc.com` 分别指向两个不同仓库内的 GihHub Pages 博客
 
-### 情况1. 二级域名直接做 GitHub Pages 博客地址，如 abc.com 这种
+### 情况1. 二级域名直接做 GitHub Pages 博客地址，如 `abc.com` 这种
 域名 - DNS - Add record 添加记录
 | Type: A | Name: @ | IPv4 address: 185.199.108.153 | Proxy status: Proxied | TTL: Auto |
+| :-------: | :---------: | :--------------------------------: | :----------------------: | :---------: |
 | Type: A | Name: @ | IPv4 address: 185.199.109.153 | Proxy status: Proxied | TTL: Auto |
 | Type: A | Name: @ | IPv4 address: 185.199.110.153 | Proxy status: Proxied | TTL: Auto |
 | Type: A | Name: @ | IPv4 address: 185.199.111.153 | Proxy status: Proxied | TTL: Auto |
 
 GitHub 仓库
-Settings - Pages - Custom domain: abc.com（不需要带 http:// 或 https:// 前缀）
+Settings - Pages - Custom domain: `abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
 
-### 情况2. 三级域名做 GitHub Pages 博客地址，如 www.abc.com 或 blog.abc.com（以此为例）
+### 情况2. 三级域名做 GitHub Pages 博客地址，如 `www.abc.com` 或 `blog.abc.com`（以此为例）
 域名 - DNS - Add record 添加记录
-| Type: CNAME | Name: blog | Target: 用户名.github.io | Proxy status: Proxied | TTL: Auto |
+`| Type: CNAME | Name: blog | Target: 用户名.github.io | Proxy status: Proxied | TTL: Auto |`
 或先添加情况1的 DNS记录，然后直接
-| Type: CNAME | Name: blog | Target: @ | Proxy status: Proxied | TTL: Auto |
+`| Type: CNAME | Name: blog | Target: @ | Proxy status: Proxied | TTL: Auto |`
 
 GitHub 仓库
-Settings - Pages - Custom domain: blog.abc.com（不需要带 http:// 或 https:// 前缀）
+Settings - Pages - Custom domain: `blog.abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
 
 等待黄色的 DNS Check in Progress 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）
@@ -137,7 +139,7 @@ Save
 
 - 修改仓库主页右上角 About 链接（非必要）
 Code - About - 齿轮图标
-Website: https://域名/
+Website: `https://域名/`
 Save changes
 
 
@@ -149,20 +151,21 @@ Commit changes
 
 上传自定义文件必须都以 /static 作为初始目录，否则 Gmeek 博客程序没法识别
 根据作者建议，插件目录最好为 /static/assets/内，404页面为 /static/404.html，其它实测没所谓
-插件 /static/assets/插件.js
-404页面 /static/404.html
-背景图 /static/bg/背景图.jpg
-头像 /static/logo/avatar.jpg
+如
+插件 `/static/assets/插件.js`
+404页面 `/static/404.html`
+背景图 `/static/bg/背景图.jpg`
+头像 `/static/logo/avatar.jpg`
 
 假设目录内容分别有下面两样
 404页面：/static/404.html
 插件：/static/assets/插件.js
 若未指定域名，之后引用的文件链接分别需要去掉为 /static 后成为
-https://用户名.github.io/404.html
-https://用户名.github.io/assets/插件.js
-若指定了自定义域名，如 abc.com，那就是
-https://abc.com/assets/404.html
-https://abc.com/assets/AriticleTocTopBot.js
+`https://用户名.github.io/404.html`
+`https://用户名.github.io/assets/插件.js`
+若指定了自定义域名，如 `abc.com`，那就是
+`https://abc.com/assets/404.html`
+`https://abc.com/assets/AriticleTocTopBot.js`
 
 - 修改 config.json
 Code - config.json - Edit this file - 按需修改 - Commit changes
@@ -185,6 +188,6 @@ Actions - build Gmeek - Run workflow - Run workflow
 - 重建博客原仓库删掉后，之前通过这个仓库 issues 上传的图片也会 404，所以重建博客后之前备份的文章文档内的图片链接需要重新上传更新
 这个方式让我误解为通过 Issues 直接上传的图片同样会占用仓库的空间总容量，不过查了下相关说明似乎并不是
 - GitHub Issues 每创建一篇都会有一个从 #1 开始的独立的编号，删除后这个编号就会永久丢失，除非整个博客删掉重建，所以如果想让文章编号连续，可以通过修改这篇 Issue 替换掉就内容，而不是删掉，不过修改的话 Issue 底部也会有改名记录之类就是了
-- 假设 About 和 Link 分别是前两篇文章，且 config.json 指定了博客 URL 为更简洁的 "urlMode":"issue" 状态后，访问博客 abc.com/post/1.html 和 abc.com/post/2.html 都是 404，变成了 abc.com/post/about.html 和 abc.com/post/link.html 之后的文章都是从  abc.com/post/3.html 开始算
+- 假设 About 和 Link 分别是前两篇文章，且 config.json 从默认的 `"urlMode":"pinyin",` 改成了博客 URL 为更简洁的 `"urlMode":"issue",` 状态后，访问博客 `abc.com/post/1.html` 和 `abc.com/post/2.html` 都是 404，变成了 `abc.com/post/about.html` 和 `abc.com/post/link.html` 之后的文章都是从  `abc.com/post/3.html` 开始算
 
 
