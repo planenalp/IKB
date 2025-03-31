@@ -101,7 +101,7 @@
 ------------------------------------------------------------------------------------
 <details><summary>废案</summary> 
 
-## 1. Gmeek-html - 三行 div
+## 废案1. Gmeek-html - 三行 div
 没用，相当于 Gmeek-html 成为乱码 +  单行 HTML 标签，测试过放到 Gmeek-html 里面外面都一样
 ```
 <div  align="center">   
@@ -109,7 +109,7 @@
 </div>
 ```
 
-## 2. GitHub Issues + div
+## 废案2. GitHub Issues + div
 完全无效，都不显示图片
 ```
 <div  align="center">    
@@ -117,26 +117,26 @@
 </div>
 ```
 
-## 3. GitHub Issues Original with =size
+## 废案3. GitHub Issues Original with =size
 完全无效，都不显示图片
 `![Image](https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309 =300x300)`
 
-## 4. GitHub Issues Original with #pic_center
+## 废案4. GitHub Issues Original with #pic_center
 完全无效，都不显示图片
 `![Image](https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309#pic_center)`
 
-## 5. GitHub Issues Original with CSS
+## 废案5. GitHub Issues Original with CSS
 图片能显示但 CSS 后缀无效
 ![Image](https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309){:height="50%" width="50%"}
 
-## 6.# div + GJKen
+## 废案6.# div + GJKen
 完全无效
 ```
 <div  align="center">    
 `Image="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309"`
 </div>
 ```
-## 7. MarkDown 直接使用 base64（没法使用）
+## 废案7. MarkDown 直接使用 base64（没法使用）
 优点：可使用引用语法，将来用其它类型博客可参考使用
 缺点：GitHub Issues 不支持
 PS: Image 可以改为任意名称，顺便使用了引用方式作为示例
