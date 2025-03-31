@@ -5,7 +5,7 @@
 
 曾经用过免费的 Blogger（总感觉随时会被砍），购买服务器的 WordPress（前几个月忘记续费 g 了），研究期间一直看到有人提 GitHub Pages 方式，随便搜了下感觉传统项目的 Hugo Hexo 之类那样需要很麻烦地额外装软件+每次写文都折腾一番，也有人重装系统后忘记怎么重新部署环境懒得再折腾了的，本来就是为了不用顾虑服务器省事的感觉这样反而更复杂了
 
-然后前段时间在 V2EX 看到作者 Meedkai 发的博客程序 Gmeek 可以随时直接通过 GitHub Issues 来操作，还算比较直观+方便
+然后前段时间在 V2EX 看到作者 Meedkai 大佬发的博客程序 Gmeek 可以随时直接通过 GitHub Issues 来操作，还算比较直观+方便
 
 就是默认主题看着有点难受，花了点时间参考了几个前辈改了下主题和小插件，晚点也把用法发出来
 
@@ -36,7 +36,8 @@ Gmeek-template 用来方便创建博客的模板，创建完就不需要了，�
 ---------------------------------------------------------------------------
 # 2. 创建博客
 ## 2.1 通过模板创建
-### 来到 https://github.com/Meekdai/Gmeek-template
+### 常规创建法
+来到 https://github.com/Meekdai/Gmeek-template
 或自己 Fork 的 https://github.com/用户名/Gmeek-template
 点击 README 内的“通过模板创建仓库”创建，或右上角 Use this template - Create a new repository
 
