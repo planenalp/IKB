@@ -16,7 +16,7 @@
     "urlMode":"issue",
     "script":"<script src='https://international.klein.blue/assets/fancybox.umd.js'></script><script src='https://international.klein.blue/assets/fancyboxLoad-IKB.js'></script><script src='https://international.klein.blue/assets/AriticleTocTopBot-IKB.js'></script>",
     "allHead":"<script src='https://international.klein.blue/assets/Theme-IKB.js'></script>",
-    "indexScript":"<script src='https://international.klein.blue/assets/NumPagination.js'></script>",
+    "indexScript":"<script src='https://international.klein.blue/assets/NumPagination-IKB.js'></script>",
     "showPostSource":0,
     "primerCSS":"<link href='https://international.klein.blue/assets/primer.css' rel='stylesheet' />"
 }
