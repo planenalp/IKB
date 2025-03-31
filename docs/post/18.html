@@ -12,14 +12,14 @@
     </script>
 <meta name="description" content="<!-- ##{'timestamp':1743432646}## -->
 
-记录一些稍微需要点精力研究的用法
+记录一些稍微需要点精力研究的用法，方便之后回看
 
 --------------------------------------------------------------------------------------------------
 # 1.">
 <meta property="og:title" content="Gmeek or Markdown 写文章小技巧">
 <meta property="og:description" content="<!-- ##{'timestamp':1743432646}## -->
 
-记录一些稍微需要点精力研究的用法
+记录一些稍微需要点精力研究的用法，方便之后回看
 
 --------------------------------------------------------------------------------------------------
 # 1.">
@@ -88,9 +88,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody">
-<p>记录一些稍微需要点精力研究的用法</p>
+<p>记录一些稍微需要点精力研究的用法，方便之后回看</p>
 <hr>
-<h1>1. 文章内标题跳转</h1>
+<h1>1. 文章内跳转</h1>
+<h2>1.1 标题跳转法</h2>
 <p>跳转链接：<br>
 <code class="notranslate">[跳转链接文本](#标题名称)</code></p>
 <p>跳转到的位置（可以是 # ## ### 等）：<br>
@@ -104,10 +105,20 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>如<br>
 <code class="notranslate">[跳转到 3. Timestamp 修改文章时间](#3.-timestamp-修改文章时间)</code><br>
 <a href="#3.-timestamp-%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E6%97%B6%E9%97%B4">跳转到 3. Timestamp 修改文章时间</a></p>
-<p>PS: 这个方式似乎没效<br>
-<a href="#jump">点击跳转</a><br>
-<span id="user-content-jump">跳转到的地方</span></p>
-<p><a href="#3.-timestamp-%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E6%97%B6%E9%97%B4">跳转到 3. Timestamp 修改文章时间</a></p>
+<p>实现跳转到后面的标题位置 <code class="notranslate"># 3. Timestamp 修改文章时间</code></p>
+<h2>1.2 自定义锚点法</h2>
+<p>通过 HTML 标签定义锚点，适用于跳转到任意位置（非标题区域）</p>
+<p>规则</p>
+<ul>
+<li>锚点名称需全小写，且避免使用空格和特殊字符。</li>
+<li>若跳转位置在代码块或复杂格式区域，建议使用 <span> 或 <div> 包裹锚点标签</div></span></li>
+</ul>
+<p><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%9A%E7%82%B9%E5%90%8D">跳转链接文本</a><br>
+<a id="user-content-自定义锚点名"></a> 或 <span id="user-content-自定义锚点名"></span></p>
+<p>如<br>
+<code class="notranslate">[跳转到“2. 表格”的“基础表格语法”的效果位置](#自定义锚点法)</code><br>
+<a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%9A%E7%82%B9%E6%B3%95">跳转到“2. 表格”的“基础表格语法”的效果位置</a></p>
+<p>实现跳转到“2. 表格”的“基础表格语法”的效果位置带代码 <code class="notranslate">&lt;a id="#自定义锚点法"&gt;&lt;/a&gt;</code> 的地方</p>
 <hr>
 <h1>2. 表格</h1>
 <h2>在线生成工具</h2>
@@ -118,7 +129,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 | 内容A   | 内容B   | 内容C   |
 | 内容D   | 内容E   | 内容F   |
 </code></pre>
-<p>效果</p>
+<p>效果<a id="user-content-#自定义锚点法"></a></p>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -171,7 +182,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </table></markdown-accessiblity-table>
 <hr>
 <h1>3. Timestamp 修改文章时间</h1>
-<p><span id="user-content-#3.-timestamp-修改文章时间">3. Timestamp 修改文章时间</span></p>
 <p>作者推荐使用的这段代码，放在文章末尾<br>
 <code class="notranslate">&lt;!-- ##{"timestamp":1743432646}## --&gt;</code></p>
 <p>其中内容 <code class="notranslate">1743432646</code> 为时间戳，可在<a href="https://tool.lu/timestamp" rel="nofollow">时间戳转换</a>这里按需转换</p>
