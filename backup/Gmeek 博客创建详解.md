@@ -1,3 +1,5 @@
+<!-- ##{"timestamp":1743429389}## -->
+
 # 0. 简介
 > [Gmeek](https://github.com/Meekdai/Gmeek) 一个博客框架，超轻量级个人博客模板，完全基于Github Pages 、 Github Issues 和 Github Actions，可以称作All in Github。不需要本地部署，从搭建到写作，只需要18秒，2步搭建好博客，第3步就是写作。
 
@@ -184,4 +186,5 @@ Actions - build Gmeek - Run workflow - Run workflow
 这个方式让我误解为通过 Issues 直接上传的图片同样会占用仓库的空间总容量，不过查了下相关说明似乎并不是
 - GitHub Issues 每创建一篇都会有一个从 #1 开始的独立的编号，删除后这个编号就会永久丢失，除非整个博客删掉重建，所以如果想让文章编号连续，可以通过修改这篇 Issue 替换掉就内容，而不是删掉，不过修改的话 Issue 底部也会有改名记录之类就是了
 - 假设 About 和 Link 分别是前两篇文章，且 config.json 指定了博客 URL 为更简洁的 "urlMode":"issue" 状态后，访问博客 abc.com/post/1.html 和 abc.com/post/2.html 都是 404，变成了 abc.com/post/about.html 和 abc.com/post/link.html 之后的文章都是从  abc.com/post/3.html 开始算
+
 
