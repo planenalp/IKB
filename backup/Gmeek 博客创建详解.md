@@ -187,7 +187,41 @@ Actions - build Gmeek - Run workflow - Run workflow
 - 创建/上传其余 Issues 文章，创建或删除多余 labels
 
 ---------------------------------------------------------------------------
-# 6. 细节
+# 6. 安装评论插件 utterances
+打开随便一篇文章，首篇的 `About` 也行，点击文章底部的`评论 / comments`按钮
+
+点击弹出窗口右下角绿色的 `Sign in with GitHub` 按钮
+
+按提示登录 GitHub 账号
+
+登录后回到文章底部，再此点击文章底部的`评论 / comments`按钮，评论框内随便输入点东西
+
+点击弹出评论框右下角绿色的 `comment` 按钮
+
+此时会在评论框顶部弹出红色报错，类似这样的
+> [!CAUTION]
+> Error: utterances is not installed on 用户名/用户名.github.io. If you own this repo, [install the app](https://github.com/apps/utterances). Read more about this change in [the PR](https://github.com/utterance/utterances/pull/25).
+
+按提示点击 [install the app](https://github.com/apps/utterances)
+
+弹出页面中点击绿色按钮 `Install` - 选择当前用户名
+
+安装到指定的创建了 Gmeek 博客程序的仓库内
+for these repositories: 默认的 `All repositories` 改为 `Only select repositories`
+Select repositories: `用户名/用户名.github.io`（假设是这个）
+
+Install
+
+按提示用 passkey 或 GitHub Mobile 或 authenticator app 或 password 来验证操作
+
+完成后弹出这个[页面](https://utteranc.es/?installation_id=63741926&setup_action=install)表示安装成功
+
+再回到博客文章底部随便评论点东西测试
+
+能评论就 ok
+
+---------------------------------------------------------------------------
+# 7. 细节
 - 创建过程最好严格按照指示步骤进行，其它额外操作比如删掉多余 label，创建其它 issues 等在创建完再搞，最少要到完成[3. 初始化](#3.-初始化)为止，避免可能出现的 bug
 - 删除过 labels 后需要 Action 一次才能正常新建 Issues
 - 重建博客原仓库删掉后，之前通过这个仓库 issues 上传的图片也会 404，所以重建博客后之前备份的文章文档内的图片链接需要重新上传更新
