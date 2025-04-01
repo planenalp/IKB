@@ -85,6 +85,7 @@ function updatePagination(totalPages, currentPage) {
             --color-hover-text: #f5f5f5;
             --color-active-bg: #002fa7;
             --color-active-text: #f5f5f5;
+            --box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
         /* dark 主题颜色 */
         [data-color-mode=light][data-light-theme=dark],
@@ -97,6 +98,7 @@ function updatePagination(totalPages, currentPage) {
             --color-hover-text: #f5f5f5;
             --color-active-bg: #002fa7;
             --color-active-text: #f5f5f5;
+            --box-shadow: 0 0 transparent;
         }
         
         /* 分页插件主体 */
@@ -118,6 +120,7 @@ function updatePagination(totalPages, currentPage) {
             border: unset;
             background-color: var(--color-current-page-bg);
             color: var(--color-current-page-text);
+            box-shadow: var(--box-shadow);
             transition: 0.1s ease;
         }
 
@@ -127,6 +130,7 @@ function updatePagination(totalPages, currentPage) {
                 border-color: transparent;
                 background-color: var(--color-hover-bg);
                 color: var(--color-hover-text);
+                box-shadow: var(--box-shadow);
                 transition: 0.1s ease;
             }
         }
@@ -135,6 +139,7 @@ function updatePagination(totalPages, currentPage) {
         .pagination a:active {
             background-color: var(--color-active-bg);
             color: var(--color-active-text);
+            box-shadow: var(--box-shadow);
             transform: scale(0.9);
             transition: 0.1s ease;
         }
