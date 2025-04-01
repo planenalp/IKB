@@ -48,10 +48,10 @@
 | 尺寸    | ❌                  | ✅       |
 
 ```
-`Gmeek-html<img data-fancybox="gallery" img src="URL" width = "300" height = "300" alt="name" >`
+`Gmeek-html<img data-fancybox="gallery" img src="URL" width = "300" height = "300" alt="name">`
 ```
 
-`Gmeek-html<img data-fancybox="gallery" img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="50%" alt="logoTest" >`
+`Gmeek-html<img data-fancybox="gallery" img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="50%" alt="logoTest">`
 
 ------------------------------------------------------------------------------------
 # 3. HTML 标签 - 单行
@@ -84,12 +84,12 @@
 | 尺寸     | ✅                 | ❌       |
 
 ```
-<div  align="center">    
+<div align="center">    
 <img src="URL" width = "300" height = "300" alt="name" >
 </div>
 ```
 
-<div  align="center">    
+<div align="center">    
 <img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width = "300" height = "300" alt="logoTest" >
 </div>
 
@@ -136,7 +136,7 @@
 ## 废案1. Gmeek-html - 三行 div
 没用，相当于 Gmeek-html 成为乱码 +  单行 HTML 标签，测试过放到 Gmeek-html 里面外面都一样
 ```
-<div  align="center">   
+<div align="center">   
 `Gmeek-html<img src="URL" alt="" width = "300" height = "300" alt="name" >`
 </div>
 ```
@@ -144,7 +144,7 @@
 ## 废案2. GitHub Issues + div
 完全无效，都不显示图片
 ```
-<div  align="center">    
+<div align="center">    
 ![Image](https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309)
 </div>
 ```
