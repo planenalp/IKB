@@ -192,7 +192,7 @@ Actions - build Gmeek - Run workflow - Run workflow
 
 ### 偷懒办法
 直接点这个 [install the app](https://github.com/apps/utterances)
-然后跳到[# utterances 安装过程](#utterances-安装过程)
+然后跳到 → [# utterances 安装操作](#utterances-安装操作)
 
 ### 正常办法
 打开随便一篇文章，首篇的 `About` 也行，点击文章底部的`评论 / comments`按钮
@@ -205,13 +205,13 @@ Actions - build Gmeek - Run workflow - Run workflow
 
 点击弹出评论框右下角绿色的 `comment` 按钮
 
-此时会在评论框顶部弹出红色报错，类似这样的
+此时会在评论框顶部弹出红色报错，类似下面这个：
 > [!CAUTION]
 > Error: utterances is not installed on 用户名/用户名.github.io. If you own this repo, [install the app](https://github.com/apps/utterances). Read more about this change in [the PR](https://github.com/utterance/utterances/pull/25).
 
 按提示点击 [install the app](https://github.com/apps/utterances)
 
-### utterances 安装过程
+### utterances 安装操作
 弹出页面中点击绿色按钮 `Install` - 选择当前用户名
 
 安装到指定的创建了 Gmeek 博客程序的仓库内
