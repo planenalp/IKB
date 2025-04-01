@@ -188,6 +188,7 @@ Actions - build Gmeek - Run workflow - Run workflow
 
 ---------------------------------------------------------------------------
 # 6. 安装评论插件 utterances
+## 安装
 打开随便一篇文章，首篇的 `About` 也行，点击文章底部的`评论 / comments`按钮
 
 点击弹出窗口右下角绿色的 `Sign in with GitHub` 按钮
@@ -208,7 +209,7 @@ Actions - build Gmeek - Run workflow - Run workflow
 
 安装到指定的创建了 Gmeek 博客程序的仓库内
 for these repositories: 默认的 `All repositories` 改为 `Only select repositories`
-Select repositories: `用户名/用户名.github.io`（假设是这个）
+Select repositories: `用户名/用户名.github.io`（假设是这个）（可多选）
 
 Install
 
@@ -219,6 +220,12 @@ Install
 再回到博客文章底部随便评论点东西测试
 
 能评论就 ok
+
+## 后续调整
+之后想管理，增删可以到 GitHub 页面右上角 - 头像 - Settings
+左侧栏目 Integrations - Applications
+中间栏目 utterances - Configure
+这里重新修改安装的库，或底部 Uninstall 删除 utterances 程序
 
 ---------------------------------------------------------------------------
 # 7. 细节
