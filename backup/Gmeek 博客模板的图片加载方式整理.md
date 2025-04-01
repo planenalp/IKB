@@ -2,8 +2,8 @@
 
 # 总结
 1. 99.9% 情况下，只需用 [1. GitHub Pages upload](#1.-github-pages-upload) 模板的 MarkDown 的标准语法 `![Image](URL)`
-2. 要改居中，只能用 [4. HTML 标签 - 三行 div](#4.-html-标签---三行-div)（没必要）
-3. 要改尺寸或用 base64，用 [2. Gmeek + Fancybox 引用代码](#2.-gmeek-+-fancybox-引用代码)（没必要）
+2. 要改尺寸或用 base64，用 [2. Gmeek + Fancybox 引用代码](#2.-gmeek-+-fancybox-引用代码)（没必要）
+3. 要改居中，只能用 [4. HTML 标签 - 三行 div](#4.-html-标签---三行-div)（没必要）
 4. 仅用 base64，也可用 [5. GJken 代码](#5.-gjken-代码)（没必要）
 
 - 因为 GitHub Issues 有最大字符限制，页内添加一张几十K图片已经是极限，而且两种 base64 实现方式都没法使用 MarkDown 的引用语法，所以研究 base64 没意义
