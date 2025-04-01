@@ -108,8 +108,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h1>1. GitHub Pages upload</h1>
 <p>优点：支持 Issues 预览，支持 Fancybox，推荐日常使用<br>
 缺点：不支持 base64 编码</p>
-<pre class="notranslate"><code class="notranslate">![Image](URL)
-</code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -121,7 +119,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tbody>
 <tr>
 <td align="center">Fancybox</td>
-<td align="center">✅</td>
+<td align="center">❌</td>
 <td align="center">✅</td>
 </tr>
 <tr>
@@ -141,13 +139,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<pre class="notranslate"><code class="notranslate">![Image](URL)
+</code></pre>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309"><img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" alt="Image" style="max-width: 100%;"></a></p>
 <hr>
 <h1>2. Gmeek + Fancybox 引用代码</h1>
 <p>优点：目前自定义尺寸唯一方法，不用改代码直接支持含 base64 编码内的所有图片，推荐偶然用 base64 时使用<br>
 缺点：可能不支持懒加载插件（不能添加懒加载代码 <code class="notranslate">ImgLazyLoad-circle</code> 否则会失效），没法使用常规 MarkDown 引用语法，不过本来就最多只能添加一两张，所以没所谓懒加载，格式要额外记</p>
-<pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;img data-fancybox="gallery" img src="URL" width = "300" height = "300" alt="name" &gt;`
-</code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -159,7 +157,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tbody>
 <tr>
 <td align="center">Fancybox</td>
-<td align="center">✅</td>
+<td align="center">❌</td>
 <td align="center">✅</td>
 </tr>
 <tr>
@@ -179,13 +177,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;img data-fancybox="gallery" img src="URL" width = "300" height = "300" alt="name" &gt;`
+</code></pre>
 <p><img data-fancybox="gallery" img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="50%" alt="logoTest" ></p>
 <hr>
 <h1>3. HTML 标签 - 单行</h1>
 <p>优点：GitHub Issues 内比较完整支持<br>
 缺点：约等于 <code class="notranslate">[description](url)</code>，格式麻烦，意义不大</p>
-<pre class="notranslate"><code class="notranslate">&lt;img src="URL" width = "300" height = "300" alt="name" &gt;
-</code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -197,7 +195,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tbody>
 <tr>
 <td align="center">Fancybox</td>
-<td align="center">✅</td>
+<td align="center">❌</td>
 <td align="center">✅</td>
 </tr>
 <tr>
@@ -217,15 +215,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<pre class="notranslate"><code class="notranslate">&lt;img src="URL" width = "300" height = "300" alt="name" &gt;
+</code></pre>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309"><img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="300" height="300" alt="logoTest" style="max-width: 100%;"></a></p>
 <hr>
 <h1>4. HTML 标签 - 三行 div</h1>
 <p>优点：目前居中唯一方法，几乎全功能<br>
 缺点：格式用着比较麻烦，可惜 Gmeek 内不支持尺寸</p>
-<pre class="notranslate"><code class="notranslate">&lt;div  align="center"&gt;    
-&lt;img src="URL" width = "300" height = "300" alt="name" &gt;
-&lt;/div&gt;
-</code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -237,7 +233,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tbody>
 <tr>
 <td align="center">Fancybox</td>
-<td align="center">✅</td>
+<td align="center">❌</td>
 <td align="center">✅</td>
 </tr>
 <tr>
@@ -257,6 +253,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<pre class="notranslate"><code class="notranslate">&lt;div  align="center"&gt;    
+&lt;img src="URL" width = "300" height = "300" alt="name" &gt;
+&lt;/div&gt;
+</code></pre>
 <div align="center">    
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309"><img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="300" height="300" alt="logoTest" style="max-width: 100%;"></a>
 </div>
@@ -265,8 +265,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>来源：<a href="https://gjken.github.io/post/1.html" rel="nofollow">Gmeek - 记录使用过程</a>，改成 <code class="notranslate">插件.js</code> 解锁功能<br>
 优点：语法简单，兼容性好，支持含 base64 编码内的所有图片，可在需要 base64 时使用，但没太大意义<br>
 缺点：不支持 Issues 预览，要额外添加代码进插件，没法使用常规 MarkDown 引用语法，不过本来就最多只能添加一两张，所以没所谓懒加载，格式要额外记</p>
-<pre class="notranslate"><code class="notranslate">`Image="URL"`
-</code></pre>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -278,7 +276,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <tbody>
 <tr>
 <td align="center">Fancybox</td>
-<td align="center">✅</td>
+<td align="center">❌</td>
 <td align="center">✅</td>
 </tr>
 <tr>
@@ -298,14 +296,47 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
+<pre class="notranslate"><code class="notranslate">`Image="URL"`
+</code></pre>
 <p><code class="notranslate">Image="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309"</code></p>
 <hr>
 <h1>6. Gmeek 自带格式（复杂情况使用）</h1>
 <p>优点：支持 HTML 语法<br>
 缺点：不支持 Issues 预览，不支持 Fancybox，格式不好记</p>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th align="center">自定义</th>
+<th align="center">GitHub Issues</th>
+<th align="center">Gmeek</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Fancybox</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+</tr>
+<tr>
+<td align="center">显示</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+</tr>
+<tr>
+<td align="center">位置</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+</tr>
+<tr>
+<td align="center">尺寸</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
 <pre class="notranslate"><code class="notranslate">`Gmeek-html&lt;img src="URL" alt="name" width="50%"&gt;`
 </code></pre>
-<p><img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309"></p>
+<p><img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="50%"></p>
 <hr>
 <details><summary>废案</summary> 
 <h2>废案1. Gmeek-html - 三行 div</h2>

@@ -22,16 +22,16 @@
 优点：支持 Issues 预览，支持 Fancybox，推荐日常使用
 缺点：不支持 base64 编码
 
-```
-![Image](URL)
-```
-
 | 自定义 | GitHub Issues | Gmeek |
 | :------: | :--------------: | :-------: |
-| Fancybox | ✅             | ✅        |
+| Fancybox | ❌             | ✅        |
 | 显示    | ✅                  | ✅       |
 | 位置    | ❌                  | ❌       |
 | 尺寸    | ❌                  | ❌       |
+
+```
+![Image](URL)
+```
 
 ![Image](https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309)
 
@@ -40,16 +40,16 @@
 优点：目前自定义尺寸唯一方法，不用改代码直接支持含 base64 编码内的所有图片，推荐偶然用 base64 时使用
 缺点：可能不支持懒加载插件（不能添加懒加载代码 `ImgLazyLoad-circle` 否则会失效），没法使用常规 MarkDown 引用语法，不过本来就最多只能添加一两张，所以没所谓懒加载，格式要额外记
 
-```
-`Gmeek-html<img data-fancybox="gallery" img src="URL" width = "300" height = "300" alt="name" >`
-```
-
 | 自定义 | GitHub Issues | Gmeek |
 | :------: | :--------------: | :-------: |
-| Fancybox | ✅             | ✅        |
+| Fancybox | ❌             | ✅        |
 | 显示    | ❌                  | ✅       |
 | 位置    | ❌                  | ❌       |
 | 尺寸    | ❌                  | ✅       |
+
+```
+`Gmeek-html<img data-fancybox="gallery" img src="URL" width = "300" height = "300" alt="name" >`
+```
 
 `Gmeek-html<img data-fancybox="gallery" img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="50%" alt="logoTest" >`
 
@@ -58,16 +58,16 @@
 优点：GitHub Issues 内比较完整支持
 缺点：约等于 `[description](url)`，格式麻烦，意义不大
 
-```
-<img src="URL" width = "300" height = "300" alt="name" >
-```
-
 | 自定义 | GitHub Issues | Gmeek |
 | :------: | :--------------: | :-------: |
-| Fancybox | ✅             | ✅        |
+| Fancybox | ❌             | ✅        |
 | 显示     | ✅                 | ✅       |
 | 位置     | ❌                 | ❌       |
 | 尺寸     | ✅                 | ❌       |
+
+```
+<img src="URL" width = "300" height = "300" alt="name" >
+```
 
 <img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width = "300" height = "300" alt="logoTest" >
 
@@ -76,18 +76,18 @@
 优点：目前居中唯一方法，几乎全功能
 缺点：格式用着比较麻烦，可惜 Gmeek 内不支持尺寸
 
+| 自定义 | GitHub Issues | Gmeek |
+| :------: | :--------------: | :-------: |
+| Fancybox | ❌             | ✅        |
+| 显示     | ✅                 | ✅       |
+| 位置     | ✅                 | ✅       |
+| 尺寸     | ✅                 | ❌       |
+
 ```
 <div  align="center">    
 <img src="URL" width = "300" height = "300" alt="name" >
 </div>
 ```
-
-| 自定义 | GitHub Issues | Gmeek |
-| :------: | :--------------: | :-------: |
-| Fancybox | ✅             | ✅        |
-| 显示     | ✅                 | ✅       |
-| 位置     | ✅                 | ✅       |
-| 尺寸     | ✅                 | ❌       |
 
 <div  align="center">    
 <img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width = "300" height = "300" alt="logoTest" >
@@ -99,16 +99,16 @@
 优点：语法简单，兼容性好，支持含 base64 编码内的所有图片，可在需要 base64 时使用，但没太大意义
 缺点：不支持 Issues 预览，要额外添加代码进插件，没法使用常规 MarkDown 引用语法，不过本来就最多只能添加一两张，所以没所谓懒加载，格式要额外记
 
-```
-`Image="URL"`
-```
-
 | 自定义 | GitHub Issues | Gmeek |
 | :------: | :--------------: | :-------: |
-| Fancybox | ✅             | ✅        |
+| Fancybox | ❌             | ✅        |
 | 显示    | ❌                  | ✅       |
 | 位置    | ❌                  | ❌       |
 | 尺寸    | ❌                  | ❌       |
+
+```
+`Image="URL"`
+```
 
 `Image="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309"`
 
@@ -116,10 +116,19 @@
 # 6. Gmeek 自带格式（复杂情况使用）
 优点：支持 HTML 语法
 缺点：不支持 Issues 预览，不支持 Fancybox，格式不好记
+
+| 自定义 | GitHub Issues | Gmeek |
+| :------: | :--------------: | :-------: |
+| Fancybox | ❌             | ❌        |
+| 显示    | ❌                  | ✅       |
+| 位置    | ❌                  | ❌       |
+| 尺寸    | ❌                  | ✅       |
+
 ```
 `Gmeek-html<img src="URL" alt="name" width="50%">`
 ```
-`Gmeek-html<img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309">`
+
+`Gmeek-html<img src="https://github.com/user-attachments/assets/918d11b9-5864-429e-b7fe-1dffcb08a309" width="50%">`
 
 ------------------------------------------------------------------------------------
 <details><summary>废案</summary> 
