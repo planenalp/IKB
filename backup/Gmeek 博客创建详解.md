@@ -189,6 +189,12 @@ Actions - build Gmeek - Run workflow - Run workflow
 ---------------------------------------------------------------------------
 # 6. 安装评论插件 utterances
 ## 安装
+
+### 偷懒办法
+直接点这个 [install the app](https://github.com/apps/utterances)
+然后跳到[# utterances 安装过程](#utterances-安装过程)
+
+### 正常办法
 打开随便一篇文章，首篇的 `About` 也行，点击文章底部的`评论 / comments`按钮
 
 点击弹出窗口右下角绿色的 `Sign in with GitHub` 按钮
@@ -205,6 +211,7 @@ Actions - build Gmeek - Run workflow - Run workflow
 
 按提示点击 [install the app](https://github.com/apps/utterances)
 
+### utterances 安装过程
 弹出页面中点击绿色按钮 `Install` - 选择当前用户名
 
 安装到指定的创建了 Gmeek 博客程序的仓库内
