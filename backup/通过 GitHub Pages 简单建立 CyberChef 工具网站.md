@@ -66,10 +66,10 @@ GitHub 仓库
 Settings - Pages - Custom domain: `cyberchef.abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
 
-### 验证
-等待黄色的 DNS Check in Progress 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）
-
 </details>
+
+验证
+等待黄色的 DNS Check in Progress 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）
 
 ## 检查
 完成后打开域名访问一次看是否正常
