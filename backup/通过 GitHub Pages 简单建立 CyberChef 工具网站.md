@@ -36,6 +36,11 @@ Select branch: `gh-pages`
 `gh-pages` `/(root)` `Save`
 点击 `Save` 保存状态
 
+> [!CAUTION]
+> 回到仓库首页 `用户名/CyberChef`，等待一段时间刷新直到中间主栏目顶部的 `pending 🟡` 变成 `success ✅`
+> 然后再进行下一步自定义域名操作，否则可能会有 bug 导致没法成功初始化
+
+
 ## 自定义域名（有的话）
 Custom domain
 填入域名如 `cyberchef.abc.com`
