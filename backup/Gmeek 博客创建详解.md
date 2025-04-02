@@ -108,14 +108,15 @@ Actions - build Gmeek - Run workflow - Run workflow
 
 
 ## 4.2 指定自定义域名
-- 修改博客正式访问域名（非必要）
+### 修改博客正式访问域名（非必要）
 官方教程：[Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-
 
 以 Cloudflare 为例，其它大同小异
 情况1和情况2的 DNS 记录本身并不冲突，可同时存在，实现 `abc.com` 和 `blog.abc.com` 分别指向两个不同仓库内的 GihHub Pages 博客
 
-### 情况1. 二级域名直接做 GitHub Pages 博客地址，如 `abc.com` 这种
+#### 情况1. 二级域名直接做 GitHub Pages 博客地址
+如 `abc.com` 这种
+
 域名 - DNS - Add record 添加记录
 | Type: A | Name: @ | IPv4 address: 185.199.108.153 | Proxy status: Proxied | TTL: Auto |
 | :-------: | :---------: | :--------------------------------: | :----------------------: | :---------: |
@@ -127,7 +128,9 @@ GitHub 仓库
 Settings - Pages - Custom domain: `abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
 
-### 情况2. 三级域名做 GitHub Pages 博客地址，如 `www.abc.com` 或 `blog.abc.com`（以此为例）
+#### 情况2. 三级域名做 GitHub Pages 博客地址
+如 `www.abc.com` 或 `blog.abc.com`（以此为例）
+
 域名 - DNS - Add record 添加记录
 `| Type: CNAME | Name: blog | Target: 用户名.github.io | Proxy status: Proxied | TTL: Auto |`
 或先添加情况1的 DNS记录，然后直接
@@ -137,12 +140,13 @@ GitHub 仓库
 Settings - Pages - Custom domain: `blog.abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
 
+#### 验证
 等待黄色的 DNS Check in Progress 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）
 
-### 检查
+#### 检查
 完成后打开域名访问一次看是否正常
 
-- 修改仓库主页右上角 About 链接（非必要）
+### 修改仓库主页右上角 About 链接（非必要）
 Code - About - 齿轮图标
 Website: `https://域名/`
 Save changes

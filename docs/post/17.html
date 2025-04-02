@@ -154,13 +154,12 @@ Create</p>
 <p>观察 build Gmeek 能否顺利运行<br>
 完成后浏览器按 F12 - 网络 - 停用缓存，然后输入当前域名 <code class="notranslate">https://用户名.github.io</code> 检查是否能正常访问，强烈建议之后每次都这样检查</p>
 <h2>4.2 指定自定义域名</h2>
-<ul>
-<li>修改博客正式访问域名（非必要）<br>
-官方教程：<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a></li>
-</ul>
+<h3>修改博客正式访问域名（非必要）</h3>
+<p>官方教程：<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a></p>
 <p>以 Cloudflare 为例，其它大同小异<br>
 情况1和情况2的 DNS 记录本身并不冲突，可同时存在，实现 <code class="notranslate">abc.com</code> 和 <code class="notranslate">blog.abc.com</code> 分别指向两个不同仓库内的 GihHub Pages 博客</p>
-<h3>情况1. 二级域名直接做 GitHub Pages 博客地址，如 <code class="notranslate">abc.com</code> 这种</h3>
+<h4>情况1. 二级域名直接做 GitHub Pages 博客地址</h4>
+<p>如 <code class="notranslate">abc.com</code> 这种</p>
 <p>域名 - DNS - Add record 添加记录</p>
 <markdown-accessiblity-table><table role="table">
 <thead>
@@ -199,7 +198,8 @@ Create</p>
 <p>GitHub 仓库<br>
 Settings - Pages - Custom domain: <code class="notranslate">abc.com</code>（不需要带 http:// 或 https:// 前缀）<br>
 Save</p>
-<h3>情况2. 三级域名做 GitHub Pages 博客地址，如 <code class="notranslate">www.abc.com</code> 或 <code class="notranslate">blog.abc.com</code>（以此为例）</h3>
+<h4>情况2. 三级域名做 GitHub Pages 博客地址</h4>
+<p>如 <code class="notranslate">www.abc.com</code> 或 <code class="notranslate">blog.abc.com</code>（以此为例）</p>
 <p>域名 - DNS - Add record 添加记录<br>
 <code class="notranslate">| Type: CNAME | Name: blog | Target: 用户名.github.io | Proxy status: Proxied | TTL: Auto |</code><br>
 或先添加情况1的 DNS记录，然后直接<br>
@@ -207,15 +207,14 @@ Save</p>
 <p>GitHub 仓库<br>
 Settings - Pages - Custom domain: <code class="notranslate">blog.abc.com</code>（不需要带 http:// 或 https:// 前缀）<br>
 Save</p>
+<h4>验证</h4>
 <p>等待黄色的 DNS Check in Progress 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）</p>
-<h3>检查</h3>
+<h4>检查</h4>
 <p>完成后打开域名访问一次看是否正常</p>
-<ul>
-<li>修改仓库主页右上角 About 链接（非必要）<br>
-Code - About - 齿轮图标<br>
+<h3>修改仓库主页右上角 About 链接（非必要）</h3>
+<p>Code - About - 齿轮图标<br>
 Website: <code class="notranslate">https://域名/</code><br>
-Save changes</li>
-</ul>
+Save changes</p>
 <h2>4.3 其它</h2>
 <ul>
 <li>上传 static 目录<br>
