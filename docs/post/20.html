@@ -86,14 +86,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody">
 <h1>BB</h1>
 <p>成品在此：<a href="https://online-tools.klein.blue/" rel="nofollow">online-tools</a></p>
-<p>这个使用自定义域名的话情况略微复杂，请仔细参考文章后半段</p>
 <p>刚用 GitHub Pages 简单搭建了个 CyberChef 工具网站，顺手把 <a href="https://github.com/emn178/online-tools">emn178/online-tools</a> 也搞了</p>
+<p>这个想使用自定义域名的话有亿点复杂，请仔细参考文章后半段<br>
+本来以为会很简单的..</p>
+<hr>
 <h1>Fork 克隆项目</h1>
 <p>来到 <a href="https://github.com/emn178/online-tools">emn178/online-tools</a> ，右上角 Fork - Create a new fork</p>
 <p>Owner: <code class="notranslate">用户名</code> / Repository name: <code class="notranslate">online-tools</code>（默认，也可以填 <code class="notranslate">用户名.github.io</code>）</p>
 <p>Description: <code class="notranslate">默认</code></p>
 <p>取消打勾 <code class="notranslate">Copy the master branch only</code> （非必要）</p>
 <p>Create fork</p>
+<hr>
 <h1>初始化设置</h1>
 <p>Fork 完成后自动跳到新页面 <code class="notranslate">用户名/online-tools</code><br>
 Settings - Pages</p>
@@ -165,6 +168,7 @@ Save</p>
 <p>验证<br>
 等待黄色的 DNS Check in Progress<br>
 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）</p>
+<hr>
 <h1>修复自定义域名 bug</h1>
 <p>这个项目没适配自定义域名的情况，绑定了 <code class="notranslate">online-tools.abc.com</code> 后打开的状态还是维持 <code class="notranslate">用户名.github.io/online-tools</code> 的格式全部变成依然在读取 <code class="notranslate">online-tools.abc.com/online-tools</code> 目录内的文件，导致各种 CSS 和 js 都加载失败</p>
 <p>解决方案<br>
@@ -274,6 +278,7 @@ jobs:
 <li>选择 main 分支，点击绿色 “Run workflow” 按钮</li>
 <li>等待几秒，刷新页面查看结果</li>
 </ol>
+<hr>
 <h1>检查</h1>
 <p>回到仓库首页 <code class="notranslate">用户名/online-tools</code>，等待一段时间刷新直到中间主栏目顶部的 <code class="notranslate">pending 🟡</code> 变成 <code class="notranslate">success ✅</code><br>
 完成后打开域名访问一次看是否正常</p>
