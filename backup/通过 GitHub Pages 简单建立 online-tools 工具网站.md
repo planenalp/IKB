@@ -1,7 +1,16 @@
 <!-- ##{"timestamp":1743617776}## -->
 
 # BB
-成品在此：[online-tools](https://online-tools.klein.blue/)
+这个项目似乎没适配自定义域名的情况，绑定了 `online-tools.abc.com` 后打开的状态还是维持 `用户名.github.io/online-tools` 的格式全部变成依然在读取 `online-tools.abc.com/online-tools` 目录内的文件，导致各种 CSS 和 js 都加载失败
+
+所以目前只能通过下面这两种不绑定域名的方式来使用：
+
+- Repository name: `online-tools`，域名就是 `用户名.github.io/online-tools`（注意大小写）
+- Repository name: `用户名.github.io`，域名就是 `用户名.github.io`
+
+除非设置域名转发，比如在 Cloudflare 内设置 `online-tools.abc.com` 重定向到 `用户名.github.io/online-tools`
+
+成品在此（没法使用自定义域名，所以链接作废）：[online-tools](https://online-tools.klein.blue/)
 
 刚用 GitHub Pages 简单搭建了个 CyberChef 工具网站，顺手把 [emn178/online-tools](https://github.com/emn178/online-tools) 也搞了
 
@@ -31,10 +40,6 @@ Select branch: `master`
 `master` `/(root)` `Save`
 点击 `Save` 保存状态
 
-> [!CAUTION]
-> 回到仓库首页 `用户名/CyberChef`，等待一段时间刷新直到中间主栏目顶部的 `pending 🟡` 变成 `success ✅`
-> 然后再进行下一步自定义域名操作，否则可能会有 bug 导致没法成功初始化
-
 ## 自定义域名（有的话）
 Custom domain
 填入域名如 `online-tools.abc.com`
@@ -47,7 +52,7 @@ Custom domain
 
 情况1和情况2的 DNS 记录本身并不冲突，可同时存在，实现 `abc.com` 和 `online-tools.abc.com` 分别指向两个不同仓库内的 GihHub Pages 项目
 
-### 情况1. 二级域名直接做 GitHub Pages 的 CyberChef 项目地址
+### 情况1. 二级域名直接做 GitHub Pages 的 online-tools 项目地址
 如 `abc.com` 这种
 
 域名 - DNS - Add record 添加记录
@@ -61,7 +66,7 @@ GitHub 仓库
 Settings - Pages - Custom domain: `abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
 
-### 情况2. 三级域名做 GitHub Pages 的 CyberChef 项目地址
+### 情况2. 三级域名做 GitHub Pages 的 online-tools 项目地址
 如 `www.abc.com` 或 `online-tools.abc.com` 或 `ot.abc.com`
 
 域名 - DNS - Add record 添加记录
@@ -79,6 +84,7 @@ Save
 等待黄色的 DNS Check in Progress 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）
 
 ## 检查
+回到仓库首页 `用户名/online-tools`，等待一段时间刷新直到中间主栏目顶部的 `pending 🟡` 变成 `success ✅`
 完成后打开域名访问一次看是否正常
 
 - Repository name: `online-tools`，域名就是 `用户名.github.io/online-tools`（注意大小写）
