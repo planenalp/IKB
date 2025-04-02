@@ -167,15 +167,16 @@ Save</p>
 <h1>修复自定义域名 bug</h1>
 <p>这个项目没适配自定义域名的情况，绑定了 <code class="notranslate">online-tools.abc.com</code> 后打开的状态还是维持 <code class="notranslate">用户名.github.io/online-tools</code> 的格式全部变成依然在读取 <code class="notranslate">online-tools.abc.com/online-tools</code> 目录内的文件，导致各种 CSS 和 js 都加载失败</p>
 <p>解决方案<br>
-问题的核心是：资源在仓库根目录，但标签或Jekyll配置导致路径多了一个/online-tools/。以下是修复步骤：</p>
-<h2>步骤 1：修正标签</h2>
-<p>在仓库首页 <code class="notranslate">用户名/online-tools</code> 根目录下拉找到并打开 <code class="notranslate">index.html</code><br>
-右上角 <code class="notranslate">Edit this file</code> 进行编辑状态<br>
-随便点击一下中间代码框然后 <code class="notranslate">Ctrl + F</code> 搜索将 <code class="notranslate">&lt;base href="/online-tools/"&gt;</code> 替换为 <code class="notranslate">&lt;base href="/"&gt;</code>（只有一条）<br>
-这确保资源从自定义域名的根路径（<a href="https://online-tools.abc.com/%EF%BC%89%E5%8A%A0%E8%BD%BD%EF%BC%8C%E4%BE%8B%E5%A6%82" rel="nofollow">https://online-tools.abc.com/）加载，例如</a> <code class="notranslate">https://online-tools.abc.com/css/style.css</code><br>
-<code class="notranslate">Commit changes...</code> 保存并提交到GitHub</p>
-<h2>步骤 2：添加 <code class="notranslate">_config.yml</code> 以适配Jekyll</h2>
-<p>仓库被GitHub Pages识别为Jekyll站点（因为它是HTML项目），但缺少_config.yml会导致默认配置干扰路径</p>
+问题的核心是：资源在仓库根目录，但 <code class="notranslate">&lt;base&gt;</code> 标签或 Jekyll 配置导致路径多了一个 <code class="notranslate">/online-tools/</code></p>
+<p>以下是修复步骤：</p>
+<h2>步骤 1：修正 <code class="notranslate">&lt;base&gt;</code> 标签</h2>
+<p>在仓库首页 <code class="notranslate">用户名/online-tools</code> 根目录下拉找到并打开 <code class="notranslate">index.html</code></p>
+<p>右上角 <code class="notranslate">Edit this file</code> 进行编辑状态</p>
+<p>随便点击一下中间代码框然后 <code class="notranslate">Ctrl + F</code> 搜索将 <code class="notranslate">&lt;base href="/online-tools/"&gt;</code> 替换为 <code class="notranslate">&lt;base href="/"&gt;</code>（只有一条）<br>
+这确保资源从自定义域名的根路径 <code class="notranslate">https://online-tools.abc.com/</code> 加载，例如 <code class="notranslate">https://online-tools.abc.com/css/style.css</code></p>
+<p><code class="notranslate">Commit changes...</code> 保存并提交到  GitHub</p>
+<h2>步骤 2：添加 <code class="notranslate">_config.yml</code> 以适配 Jekyll</h2>
+<p>仓库被 GitHub Pages 识别为 Jekyll 站点（因为它是 HTML 项目），但缺少 <code class="notranslate">_config.yml</code> 会导致默认配置干扰路径</p>
 <p>在仓库根目录 <code class="notranslate">Add file</code> - <code class="notranslate">Create new file</code> 创建文件<br>
 在 <code class="notranslate">Name your file</code> 输入框中，输入 <code class="notranslate">_config.yml</code></p>
 <p>在编辑器中粘贴以下代码：</p>
@@ -184,20 +185,20 @@ url: "https://online-tools.abc.com"
 </code></pre>
 <p><code class="notranslate">Commit changes...</code> 保存并提交到 GitHub</p>
 <ul>
-<li>baseurl: ""表示站点部署在根路径，而不是/online-tools/</li>
-<li>url指定自定义域名</li>
+<li>baseurl: ""表示站点部署在根路径，而不是 <code class="notranslate">/online-tools/</code></li>
+<li>url 指定自定义域名</li>
 </ul>
-<h2>步骤 3：设置GitHub Actions 自动化更新流程防止更新后 index.html 的改动丢失</h2>
+<h2>步骤 3：设置 GitHub Actions 自动化更新流程防止更新后 index.html 的改动丢失</h2>
 <h3>步骤 3.1 创建工作流文件</h3>
 <ul>
-<li>创建一个简单的GitHub Action，在每次拉取上游更新后自动调整标签。</li>
-<li>示例工作流（.github/workflows/fix-base.yml）</li>
+<li>创建一个简单的 GitHub Action，在每次拉取上游更新后自动调整 <code class="notranslate">&lt;base&gt;</code> 标签</li>
+<li>示例工作流 <code class="notranslate">.github/workflows/fix-base.yml</code></li>
 </ul>
 <p>在仓库根目录 <code class="notranslate">Add file</code> - <code class="notranslate">Create new file</code> 创建文件<br>
 在 <code class="notranslate">Name your file</code> 输入框中，输入路径：<code class="notranslate">.github/workflows/fix-base.yml</code></p>
 <ul>
-<li>这会创建一个.github/workflows目录，并添加一个名为fix-base.yml的文件。</li>
-<li>注意：文件名可以随便取，但后缀必须是.yml或.yaml。</li>
+<li>这会创建一个 <code class="notranslate">.github/workflows</code> 目录，并添加一个名为 <code class="notranslate">fix-base.yml</code> 的文件</li>
+<li>注意：文件名可以随便取，但后缀必须是 <code class="notranslate">.yml</code> 或 <code class="notranslate">.yaml</code></li>
 </ul>
 <p>在编辑器中粘贴以下代码：</p>
 <pre class="notranslate"><code class="notranslate">name: Fix Base URL
@@ -222,37 +223,37 @@ jobs:
 <p>代码解释：</p>
 <ul>
 <li>name: 工作流名称，随便取，这里是“Fix Base URL”</li>
-<li>on: 触发条件，push表示推送代码时触发，branches: [ main ]限定在main分支</li>
-<li>jobs: 任务列表，这里只有一个任务fix-base</li>
-<li>runs-on: 运行环境，用Ubuntu虚拟机</li>
+<li>on: 触发条件，push 表示推送代码时触发，branches: [ main ] 限定在 main 分支</li>
+<li>jobs: 任务列表，这里只有一个任务 fix-base</li>
+<li>runs-on: 运行环境，用 Ubuntu 虚拟机</li>
 <li>steps: 执行步骤：
 <ol>
 <li>actions/checkout@v3: 拉取你的仓库代码</li>
-<li>Replace base href: 用sed命令替换标签</li>
+<li>Replace base href: 用sed命令替换 <code class="notranslate">&lt;base&gt;</code> 标签</li>
 <li>Commit changes: 将修改提交回仓库</li>
 </ol>
 </li>
 </ul>
 <p><code class="notranslate">Commit changes...</code> 保存并提交到 GitHub</p>
 <p>效果：<br>
-每次推送（包括从上游同步）后，Action会自动修正标签，无需手动干预。</p>
+每次推送（包括从上游同步）后，Action 会自动修正 <code class="notranslate">&lt;base&gt;</code> 标签，无需手动干预</p>
 <h3>步骤 3.2 测试工作流</h3>
 <ol>
-<li>触发Actions：</li>
+<li>触发 Actions：</li>
 </ol>
 <ul>
-<li>随便改动一个文件（比如在index.html加个空格），然后提交到main分支</li>
+<li>随便改动一个文件（比如在 index.html 加个空格），然后提交到 main 分支</li>
 <li>或者直接手动运行（见步骤 3）</li>
 </ul>
 <ol start="2">
 <li>查看运行状态：</li>
 </ol>
 <ul>
-<li>转到仓库的“Actions”选项卡（页面顶部，旁边有“Code”、“Issues”等）</li>
-<li>你会看到一个名为“Fix Base URL”的工作流正在运行</li>
+<li>转到仓库的 “Actions” 选项卡（页面顶部，旁边有 “Code”、“Issues” 等）</li>
+<li>你会看到一个名为 “Fix Base URL” 的工作流正在运行</li>
 <li>点击它，展开详情，看日志：
 <ul>
-<li>如果成功，会有类似“Replace base href”和“Commit changes”的输出</li>
+<li>如果成功，会有类似 “Replace base href” 和 “Commit changes” 的输出</li>
 <li>如果失败，会显示错误信息</li>
 </ul>
 </li>
@@ -261,16 +262,16 @@ jobs:
 <li>检查 <code class="notranslate">index.html</code>：</li>
 </ol>
 <ul>
-<li>运行完成后，刷新仓库页面，打开index.html，确认已改为</li>
+<li>运行完成后，刷新仓库页面，打开 index.html，确认 <code class="notranslate">&lt;base href="/online-tools/"&gt;</code> 已改为 <code class="notranslate">&lt;base href="/"&gt;</code></li>
 </ul>
 <h3>步骤 3.3 手动运行（可选）</h3>
 <p>如果想立刻测试，不用改代码：</p>
 <ol>
-<li>去“Actions”选项卡。</li>
-<li>在左侧选择“Fix Base URL”工作流。</li>
-<li>点击右侧的“Run workflow”按钮（可能需要先启用Actions）。</li>
-<li>选择main分支，点击绿色“Run workflow”按钮。</li>
-<li>等待几秒，刷新页面查看结果。</li>
+<li>去 “Actions” 选项卡</li>
+<li>在左侧选择 “Fix Base URL” 工作流</li>
+<li>点击右侧的 “Run workflow” 按钮（可能需要先启用 Actions）</li>
+<li>选择 main 分支，点击绿色 “Run workflow” 按钮</li>
+<li>等待几秒，刷新页面查看结果</li>
 </ol>
 <h1>检查</h1>
 <p>回到仓库首页 <code class="notranslate">用户名/online-tools</code>，等待一段时间刷新直到中间主栏目顶部的 <code class="notranslate">pending 🟡</code> 变成 <code class="notranslate">success ✅</code><br>
