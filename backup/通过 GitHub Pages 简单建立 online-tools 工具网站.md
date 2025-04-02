@@ -108,10 +108,10 @@ baseurl: ""
 url: "https://online-tools.abc.com"
 ```
 
-`Commit changes...` 保存并提交到 GitHub
-
 - baseurl: ""表示站点部署在根路径，而不是 `/online-tools/`
 - url 指定自定义域名
+
+`Commit changes...` 保存并提交到 GitHub
 
 ## 步骤 3：设置 GitHub Actions 自动化更新流程防止更新后 index.html 的改动丢失
 ### 步骤 3.1 创建工作流文件
@@ -165,7 +165,7 @@ jobs:
 ### 步骤 3.2 测试工作流
 1. 触发 Actions：
 - 随便改动一个文件（比如在 index.html 加个空格），然后提交到 main 分支
-- 或者直接手动运行（见步骤 3）
+- 或者直接手动运行（见步骤 3.3 手动运行）
 
 2. 查看运行状态：
 - 转到仓库的 “Actions” 选项卡（页面顶部，旁边有 “Code”、“Issues” 等）

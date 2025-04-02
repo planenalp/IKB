@@ -184,11 +184,11 @@ Save</p>
 <pre class="notranslate"><code class="notranslate">baseurl: ""
 url: "https://online-tools.abc.com"
 </code></pre>
-<p><code class="notranslate">Commit changes...</code> 保存并提交到 GitHub</p>
 <ul>
 <li>baseurl: ""表示站点部署在根路径，而不是 <code class="notranslate">/online-tools/</code></li>
 <li>url 指定自定义域名</li>
 </ul>
+<p><code class="notranslate">Commit changes...</code> 保存并提交到 GitHub</p>
 <h2>步骤 3：设置 GitHub Actions 自动化更新流程防止更新后 index.html 的改动丢失</h2>
 <h3>步骤 3.1 创建工作流文件</h3>
 <ul>
@@ -244,7 +244,7 @@ jobs:
 </ol>
 <ul>
 <li>随便改动一个文件（比如在 index.html 加个空格），然后提交到 main 分支</li>
-<li>或者直接手动运行（见步骤 3）</li>
+<li>或者直接手动运行（见步骤 3.3 手动运行）</li>
 </ul>
 <ol start="2">
 <li>查看运行状态：</li>
