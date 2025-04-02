@@ -40,7 +40,9 @@ Custom domain
 
 情况1和情况2的 DNS 记录本身并不冲突，可同时存在，实现 `abc.com` 和 `cyberchef.abc.com` 分别指向两个不同仓库内的 GihHub Pages 项目
 
-### 情况1. 二级域名直接做 GitHub Pages 的 CyberChef 项目地址，如 `abc.com` 这种
+### 情况1. 二级域名直接做 GitHub Pages 的 CyberChef 项目地址
+如 `abc.com` 这种
+
 域名 - DNS - Add record 添加记录
 | Type: A | Name: @ | IPv4 address: 185.199.108.153 | Proxy status: Proxied | TTL: Auto |
 | :-------: | :---------: | :--------------------------------: | :----------------------: | :---------: |
@@ -52,7 +54,9 @@ GitHub 仓库
 Settings - Pages - Custom domain: `abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
 
-### 情况2. 三级域名做 GitHub Pages 的 CyberChef 项目地址，如 `www.abc.com` 或 `cyberchef.abc.com` 或 `cc.abc.com`
+### 情况2. 三级域名做 GitHub Pages 的 CyberChef 项目地址
+如 `www.abc.com` 或 `cyberchef.abc.com` 或 `cc.abc.com`
+
 域名 - DNS - Add record 添加记录
 `| Type: CNAME | Name: cyberchef | Target: 用户名.github.io | Proxy status: Proxied | TTL: Auto |`
 或先添加情况1的 DNS记录，然后直接

@@ -107,7 +107,8 @@ Select branch: <code class="notranslate">gh-pages</code><br>
 <details><summary>Cloudflare 设置</summary> 
 <p>以 Cloudflare 为例，其它大同小异</p>
 <p>情况1和情况2的 DNS 记录本身并不冲突，可同时存在，实现 <code class="notranslate">abc.com</code> 和 <code class="notranslate">cyberchef.abc.com</code> 分别指向两个不同仓库内的 GihHub Pages 项目</p>
-<h3>情况1. 二级域名直接做 GitHub Pages 的 CyberChef 项目地址，如 <code class="notranslate">abc.com</code> 这种</h3>
+<h3>情况1. 二级域名直接做 GitHub Pages 的 CyberChef 项目地址</h3>
+<p>如 <code class="notranslate">abc.com</code> 这种</p>
 <p>域名 - DNS - Add record 添加记录</p>
 <markdown-accessiblity-table><table role="table">
 <thead>
@@ -146,7 +147,8 @@ Select branch: <code class="notranslate">gh-pages</code><br>
 <p>GitHub 仓库<br>
 Settings - Pages - Custom domain: <code class="notranslate">abc.com</code>（不需要带 http:// 或 https:// 前缀）<br>
 Save</p>
-<h3>情况2. 三级域名做 GitHub Pages 的 CyberChef 项目地址，如 <code class="notranslate">www.abc.com</code> 或 <code class="notranslate">cyberchef.abc.com</code> 或 <code class="notranslate">cc.abc.com</code></h3>
+<h3>情况2. 三级域名做 GitHub Pages 的 CyberChef 项目地址</h3>
+<p>如 <code class="notranslate">www.abc.com</code> 或 <code class="notranslate">cyberchef.abc.com</code> 或 <code class="notranslate">cc.abc.com</code></p>
 <p>域名 - DNS - Add record 添加记录<br>
 <code class="notranslate">| Type: CNAME | Name: cyberchef | Target: 用户名.github.io | Proxy status: Proxied | TTL: Auto |</code><br>
 或先添加情况1的 DNS记录，然后直接<br>
