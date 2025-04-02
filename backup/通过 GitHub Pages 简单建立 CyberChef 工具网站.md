@@ -1,11 +1,12 @@
 <!-- ##{"timestamp":1743613938}## -->
 
-# bb
+# BB
 成品在此：https://cyberchef.klein.blue/
 
 想用 GitHub Pages 简单搭建一个 CyberChef 工具网站，找了半天没有合适的教程，不是让下载到本地就是下载到本地再上传的误导，研究了下发现其实直接 Fork 就已经可以，还能随时更新版本，干脆自己写一个算了
 
-可惜这个项目好像没做移动端适配，有做适配的 [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools) 暂时又没找到 GitHub Pages 的用法，之后再看吧
+可惜这个项目好像没做移动端适配，只能说横屏方式能凑合用用
+有做适配的 [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools) 暂时又没找到 GitHub Pages 的用法，之后再看吧
 
 [emn178/online-tools](https://github.com/emn178/online-tools) 这个倒是好像不错，也能像 CyberChef 这样直接用，就是简陋了点
 
