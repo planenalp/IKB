@@ -3,9 +3,9 @@
 # BB
 成品在此：[online-tools](https://online-tools.klein.blue/)
 
-基本步骤和前一篇 [通过 GitHub Pages 简单建立 CyberChef 工具网站](https://international.klein.blue/post/19.html) 大同小异
-
 刚用 GitHub Pages 简单搭建了个 CyberChef 工具网站，顺手把 [emn178/online-tools](https://github.com/emn178/online-tools) 也搞了
+
+基本步骤和前一篇 [通过 GitHub Pages 简单建立 CyberChef 工具网站](https://international.klein.blue/post/19.html) 大同小异
 
 # Fork 克隆项目
 来到 [emn178/online-tools](https://github.com/emn178/online-tools) ，右上角 Fork - Create a new fork
