@@ -73,7 +73,8 @@ Save
 </details>
 
 验证
-等待黄色的 DNS Check in Progress 变成绿色 DNS check successful 即可（不等变黄也没所谓，以浏览器能打开为准）
+等待黄色的 <font color=yellow>DNS Check in Progress</font>
+变成绿色 <font color=green>DNS check successful</font> 即可（不等变黄也没所谓，以浏览器能打开为准）
 
 
 # 修复自定义域名 bug
