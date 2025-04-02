@@ -545,14 +545,27 @@ document.addEventListener('DOMContentLoaded', function() {
             flex-wrap: wrap; /* 解锁 Label 自动换行 */
         }
 
+        /* 标签 */
+        .SideNav-item .Label {
+            margin-left: 5px; /* LabelTime 以外的左间距 */
+        }
+
+        /* 时间 标签 */
         .LabelTime {
             order: 1; /* 调整两种 Label 顺序 */
             margin-left: unset !important; /* 去除左侧间隔 */
             background-color: var(--LabelTime-bgColor) !important;
         }
+        
+        /* Tag 标签 */
         .LabelName {
             order: 2; /* 调整两种 Label 顺序 */
             background-color: var(--LabelName-bgColor) !important;
+        }
+
+        /* 评论标签 */
+        .Label:not(.LabelName):not(.LabelTime) {
+            order: 3; /* 评论标签排序 */
         }
 
         /* 标签（背景色不能关闭，因为 .LabelName 字色没法自定义，除非隐藏 .LabelName） */
@@ -571,6 +584,7 @@ document.addEventListener('DOMContentLoaded', function() {
             -ms-user-select: none; /* 适用于 IE10+ 和 Edge */
             user-select: none; /* 标准语法 */
             outline: none !important; /* 解决按压边框闪烁 */
+            margin-bottom: 5px; /* 下间距防止窄屏换行紧贴 */
         }
         
         /* 重新定义 max-width: 768px 参数下的值，原为 600px */
@@ -1012,16 +1026,29 @@ document.addEventListener('DOMContentLoaded', function() {
             flex-wrap: wrap; /* 解锁 Label 自动换行 */
         }
 
+        /* 标签 */
+        .SideNav-item .Label {
+            margin-left: 5px; /* LabelTime 以外的左间距 */
+        }
+
+        /* 时间 标签 */
         .LabelTime {
             order: 1; /* 调整两种 Label 顺序 */
             margin-left: unset !important; /* 去除左侧间隔 */
             background-color: var(--LabelTime-bgColor) !important;
         }
+        
+        /* Tag 标签 */
         .LabelName {
             order: 2; /* 调整两种 Label 顺序 */
             background-color: var(--LabelName-bgColor) !important;
         }
 
+        /* 评论标签 */
+        .Label:not(.LabelName):not(.LabelTime) {
+            order: 3; /* 评论标签排序 */
+        }
+        
         /* 标签（背景色不能关闭，因为 .LabelName 字色没法自定义，除非隐藏 .LabelName） */
         /* 方案1：首页 + 搜索页 Label 边框移除，分别指定 .LabelName 和 .LabelTime 背景色（用这个） */
         /* 方案2：首页 + 搜索页 Label 边框透明，hover + active 边框 #f5f5f5，分别指定 .LabelName 和 .LabelTime 背景色*/
@@ -1038,7 +1065,7 @@ document.addEventListener('DOMContentLoaded', function() {
             -ms-user-select: none; /* 适用于 IE10+ 和 Edge */
             user-select: none; /* 标准语法 */
             outline: none !important; /* 解决按压边框闪烁 */
-
+            margin-bottom: 5px; /* 下间距防止窄屏换行紧贴 */
         }
 
         /* 顶部 #taglabel  */
