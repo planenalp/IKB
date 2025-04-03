@@ -1,6 +1,9 @@
 <!-- ##{"timestamp":1743617776}## -->
 
 # BB
+不建议设置自定义域名，用 GitHub Pages 自带的域名就好了
+这个项目没适配自定义域名的情况，绑定了 `online-tools.abc.com` 后打开的状态还是维持 `用户名.github.io/online-tools` 的格式全部变成依然在读取 `online-tools.abc.com/online-tools` 目录内的文件，导致各种 CSS 和 js 都加载失败，文章后半段研究了下修复的方法，结果弄了半天发现只是修复了首页，其它页面还是有问题，当然也有可能是我的问题。。
+
 成品在此：[online-tools](https://online-tools.klein.blue/)
 
 刚用 GitHub Pages 简单搭建了个 CyberChef 工具网站，顺手把 [emn178/online-tools](https://github.com/emn178/online-tools) 也搞了
@@ -34,13 +37,13 @@ Select branch: `master`
 `master` `/(root)` `Save`
 点击 `Save` 保存状态
 
+<details><summary>此项目不建议自定义域名</summary>
+
 ## 自定义域名（有的话）
 Custom domain
 填入域名如 `online-tools.abc.com`
 
-官方教程：[Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-
-<details><summary>Cloudflare 设置</summary> 
+官方教程：[Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) 
 
 以 Cloudflare 为例，其它大同小异
 
@@ -71,8 +74,6 @@ Save
 GitHub 仓库
 Settings - Pages - Custom domain: `online-tools.abc.com`（不需要带 http:// 或 https:// 前缀）
 Save
-
-</details>
 
 验证
 等待黄色的 <font color=yellow>DNS Check in Progress</font>
@@ -186,6 +187,8 @@ jobs:
 3. 点击右侧的 “Run workflow” 按钮（可能需要先启用 Actions）
 4. 选择 main 分支，点击绿色 “Run workflow” 按钮
 5. 等待几秒，刷新页面查看结果
+
+</details>
 
 --------------------------------------------------------------------------
 # 检查
