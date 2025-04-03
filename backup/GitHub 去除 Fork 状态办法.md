@@ -10,7 +10,7 @@
 
 ---------------------------------------------------
 # 1. 假设 Fork 一个名为 ABC 的仓库 
-仓库主页 - 右上角 Fork - Create a new fork
+仓库主页 - 右上角 Fork - `Create a new fork`
 Owner: `当前用户名`（默认） / Repository name: `ABC`（默认）
 Description: `***`（默认）
 Copy the main branch only：`取消打勾`（重要）
@@ -22,12 +22,12 @@ ABC 仓库内 Settings - General - Template repository：`打勾`
 
 ---------------------------------------------------
 # 3. 通过模板二次创建模板
+## 3.1 记录下顶部信息（非必要）
 ABC 仓库主页 - Code
-## 3.1 记录下顶部信息
 内容大致为 `forked from 原作者用户名/ABC`
 
 ## 3.2 从模板再次创建
-右上角 Use this template - Create a new repositioy
+右上角 Use this template - `Create a new repositioy`
 
 Repository template: `当前用户名/ABC`（默认）
 Include all branches：`打勾`（重要）
@@ -43,7 +43,7 @@ Description: `forked from 原作者用户名/ABC`（非必要）
 Settings - General - Template repository：`打勾`
 
 ---------------------------------------------------
-4. 删除最初 Fork 的仓库 ABC
+# 4. 删除最初 Fork 的仓库 ABC
 点击 ABC-Tempelate 主页顶部显示的 `generated from 当前用户名/ABC`
 来到 Fork 的仓库 `当前用户名/ABC`
 Settings - General - 拉到最底 Danger Zone - `Delete this repository`
@@ -53,13 +53,14 @@ Settings - General - 拉到最底 Danger Zone - `Delete this repository`
 `Delete this repository`
 
 ---------------------------------------------------
-5. 确认状态
+# 5. 确认状态
 刷新仓库 ABC-Tempelate 主页，顶部状态 `generated from 当前用户名/ABC` 消失
 完成
 
 ---------------------------------------------------
-6. 使用，通过二次模板三次创建模板
+# 6. 使用，通过二次模板三次创建模板
 仓库 ABC-Tempelate 主页
-右上角 Use this template - Create a new repositioy
+右上角 Use this template - `Create a new repositioy`
 剩余步骤参考 [# 3.3 二次创建仓库设置为模板](#3.3-二次创建仓库设置为模板)
 
+可以开始愉快地玩耍了🥳

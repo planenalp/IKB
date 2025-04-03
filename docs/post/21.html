@@ -83,7 +83,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>按步骤操作完成后可再正常 Fork 一次，互不冲突</p>
 <hr>
 <h1>1. 假设 Fork 一个名为 ABC 的仓库</h1>
-<p>仓库主页 - 右上角 Fork - Create a new fork<br>
+<p>仓库主页 - 右上角 Fork - <code class="notranslate">Create a new fork</code><br>
 Owner: <code class="notranslate">当前用户名</code>（默认） / Repository name: <code class="notranslate">ABC</code>（默认）<br>
 Description: <code class="notranslate">***</code>（默认）<br>
 Copy the main branch only：<code class="notranslate">取消打勾</code>（重要）<br>
@@ -93,11 +93,11 @@ Copy the main branch only：<code class="notranslate">取消打勾</code>（重�
 <p>ABC 仓库内 Settings - General - Template repository：<code class="notranslate">打勾</code></p>
 <hr>
 <h1>3. 通过模板二次创建模板</h1>
-<p>ABC 仓库主页 - Code</p>
-<h2>3.1 记录下顶部信息</h2>
-<p>内容大致为 <code class="notranslate">forked from 原作者用户名/ABC</code></p>
+<h2>3.1 记录下顶部信息（非必要）</h2>
+<p>ABC 仓库主页 - Code<br>
+内容大致为 <code class="notranslate">forked from 原作者用户名/ABC</code></p>
 <h2>3.2 从模板再次创建</h2>
-<p>右上角 Use this template - Create a new repositioy</p>
+<p>右上角 Use this template - <code class="notranslate">Create a new repositioy</code></p>
 <p>Repository template: <code class="notranslate">当前用户名/ABC</code>（默认）<br>
 Include all branches：<code class="notranslate">打勾</code>（重要）<br>
 Owner: <code class="notranslate">当前用户名</code>（默认） / Repository name: <code class="notranslate">ABC-Tempelate</code>（起个自己记得住的名就行）<br>
@@ -108,29 +108,24 @@ Description: <code class="notranslate">forked from 原作者用户名/ABC</code>
 <p>自动来到 ABC-Tempelate 主页，顶部显示状态 <code class="notranslate">generated from 当前用户名/ABC</code></p>
 <p>Settings - General - Template repository：<code class="notranslate">打勾</code></p>
 <hr>
-<ol start="4">
-<li>删除最初 Fork 的仓库 ABC<br>
-点击 ABC-Tempelate 主页顶部显示的 <code class="notranslate">generated from 当前用户名/ABC</code><br>
+<h1>4. 删除最初 Fork 的仓库 ABC</h1>
+<p>点击 ABC-Tempelate 主页顶部显示的 <code class="notranslate">generated from 当前用户名/ABC</code><br>
 来到 Fork 的仓库 <code class="notranslate">当前用户名/ABC</code><br>
 Settings - General - 拉到最底 Danger Zone - <code class="notranslate">Delete this repository</code><br>
 <code class="notranslate">I want to delete this repository</code><br>
 <code class="notranslate">I have read and understand these effects</code><br>
 复制或粘贴文字 <code class="notranslate">当前用户名/ABC</code><br>
-<code class="notranslate">Delete this repository</code></li>
-</ol>
+<code class="notranslate">Delete this repository</code></p>
 <hr>
-<ol start="5">
-<li>确认状态<br>
-刷新仓库 ABC-Tempelate 主页，顶部状态 <code class="notranslate">generated from 当前用户名/ABC</code> 消失<br>
-完成</li>
-</ol>
+<h1>5. 确认状态</h1>
+<p>刷新仓库 ABC-Tempelate 主页，顶部状态 <code class="notranslate">generated from 当前用户名/ABC</code> 消失<br>
+完成</p>
 <hr>
-<ol start="6">
-<li>使用，通过二次模板三次创建模板<br>
-仓库 ABC-Tempelate 主页<br>
-右上角 Use this template - Create a new repositioy<br>
-剩余步骤参考 <a href="#3.3-%E4%BA%8C%E6%AC%A1%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%A8%A1%E6%9D%BF"># 3.3 二次创建仓库设置为模板</a></li>
-</ol></div>
+<h1>6. 使用，通过二次模板三次创建模板</h1>
+<p>仓库 ABC-Tempelate 主页<br>
+右上角 Use this template - <code class="notranslate">Create a new repositioy</code><br>
+剩余步骤参考 <a href="#3.3-%E4%BA%8C%E6%AC%A1%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%A8%A1%E6%9D%BF"># 3.3 二次创建仓库设置为模板</a></p>
+<p>可以开始愉快地玩耍了🥳</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>
