@@ -8,9 +8,6 @@
 
 刚用 GitHub Pages 简单搭建了个 CyberChef 工具网站，顺手把 [emn178/online-tools](https://github.com/emn178/online-tools) 也搞了
 
-这个想使用自定义域名的话有亿点复杂，请仔细参考文章后半段
-本来以为会很简单的..
-
 --------------------------------------------------------------------------
 # Fork 克隆项目
 来到 [emn178/online-tools](https://github.com/emn178/online-tools) ，右上角 Fork - Create a new fork
