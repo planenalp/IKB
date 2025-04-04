@@ -86,10 +86,10 @@ Windows 为例，
 搜索 `用户名/ABC`
 `Clone 用户名/ABC`
 选择目录
-Clone
+`Clone`
 
 ## 5.3 创建分支
-点击顶栏第二个按钮 Current branch: `main`（或 master 等） - `New branch`
+点击顶栏第二个按钮 Current branch: `main`（或 `master` 等） - `New branch`
 
 弹出新窗口 Create a branch
 Name: `gh-pages`
@@ -99,7 +99,7 @@ Name: `gh-pages`
 
 创建的新分支 `gh-pages` 会默认自带主分支 `main` 的所有内容，需要先删除后再把 site 目录文件放进来
 
-打开当前仓库的本地目录，根据之前设置的位置找，或点击软件中间的按钮 Show in Explorer 直达
+打开当前仓库的本地目录，根据之前设置的位置找，或点击软件中间的按钮 `Show in Explorer` 直达
 
 // 虽然 Current branch 改成 `main` 还是 `gh-pages` 状态，这个本地目录都没区别
 指向的是哪个分支，修改目录就会同步到那个分支上，只需当成是 Current branch 对应的状态就可以了
