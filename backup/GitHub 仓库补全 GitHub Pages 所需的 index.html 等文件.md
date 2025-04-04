@@ -1,7 +1,7 @@
 <!-- ##{"timestamp":1743734231}## -->
 
 # BB
-有的仓库没有准备好对应的 `gh-pages` 分支方便直接创建 GitHub Pages 页面来使用，但是主分支如 main 内有对应目录 site（以此作为假设情况），里面包含了 GitHub Pages 网页创建的所需内容，此时有 N 种方式可以用
+有的仓库没有准备好对应的 `gh-pages` 分支方便直接创建 GitHub Pages 页面来使用，但是主分支如 `main` 内有对应目录 site（以此作为假设情况），里面包含了 GitHub Pages 网页创建的所需内容，此时有 N 种方式可以用
 
 以下由简单到复杂整理了一下
 
@@ -97,11 +97,11 @@ Name: `gh-pages`
 
 顶栏 Current branch 变为 `gh-pages` 状态
 
-创建的新分支 `gh-pages` 会默认自带主分支 main 的所有内容，需要先删除后再把 site 目录文件放进来
+创建的新分支 `gh-pages` 会默认自带主分支 `main` 的所有内容，需要先删除后再把 site 目录文件放进来
 
 打开当前仓库的本地目录，根据之前设置的位置找，或点击软件中间的按钮 Show in Explorer 直达
 
-// 虽然 Current branch 改成 main 还是 `gh-pages` 状态，这个本地目录都没区别
+// 虽然 Current branch 改成 `main` 还是 `gh-pages` 状态，这个本地目录都没区别
 指向的是哪个分支，修改目录就会同步到那个分支上，只需当成是 Current branch 对应的状态就可以了
 
 把隐藏的 .git 文件和 site 目录保留，其余文件全部删除
@@ -114,7 +114,7 @@ Name: `gh-pages`
 点击顶栏第三个按钮 `Publish branch` 同步修改到 GitHub 仓库上
 
 ## 5.4 检查
-来到 GitHub 仓库主页，点击中间栏 main 按钮，可以看到 Branches 上新增了名为 `gh-pages` 的分支
+来到 GitHub 仓库主页，点击中间栏 `main` 按钮，可以看到 Branches 上新增了名为 `gh-pages` 的分支
 点击进去确认之前 site 目录文件在里面，特别是 `index.html`
 
 ## 5.5 设置 GitHub Pages
