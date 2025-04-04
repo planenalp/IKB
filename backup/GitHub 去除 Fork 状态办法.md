@@ -33,7 +33,7 @@ ABC 仓库主页 - Code
 
 Repository template: `当前用户名/ABC`（默认）
 Include all branches：`打勾`（重要）
-Owner: `当前用户名`（默认） / Repository name: `ABC-Tempelate`（起个自己记得住的名就行）
+Owner: `当前用户名`（默认） / Repository name: `原作者用户名/ABC-Tempelate`（起个自己记得住的名就行）
 Description: `forked from 原作者用户名/ABC`（非必要）
 `Private`
 
