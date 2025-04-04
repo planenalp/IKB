@@ -7,7 +7,8 @@
 
 ----------------------------------------------------------------
 # 1. 重命名目录法
-下载源码，单独把解压后 site 目录重命名为 docs，当前仓库首页根目录 `Add file` - `Upload files`，把整个 docs 目录拖进去得到 - `Commit change` 提交
+下载源码，单独把解压后 site 目录重命名为 docs，当前仓库首页根目录 `Add file` - `Upload files`，把整个 docs 目录拖进去
+`Commit change` 提交
 
 设置 GitHub Pages
 Settings - Pages - Branch
