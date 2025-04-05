@@ -24,7 +24,7 @@
 SSL/TLC - Edge Certificates - Always use HTTPS
 
 -----------------------------------------------------------------------------
-# 顺便记录下绑定了域名后初始化的两个建议选项
+# 顺便记录下绑定了域名后初始化的几个建议选项
 ## 1.">
 <meta property="og:title" content="Cloudflare Always use HTTPS 选项导致的部分设备没开安全链接">
 <meta property="og:description" content="<!-- ##{'timestamp':1743850589}## -->
@@ -41,7 +41,7 @@ SSL/TLC - Edge Certificates - Always use HTTPS
 SSL/TLC - Edge Certificates - Always use HTTPS
 
 -----------------------------------------------------------------------------
-# 顺便记录下绑定了域名后初始化的两个建议选项
+# 顺便记录下绑定了域名后初始化的几个建议选项
 ## 1.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://international.klein.blue/post/23.html">
@@ -106,11 +106,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>然后突然想起曾经有过强制 HTTPS 的东西，找了下位置打开后就解决了</p>
 <p>SSL/TLC - Edge Certificates - Always use HTTPS</p>
 <hr>
-<h1>顺便记录下绑定了域名后初始化的两个建议选项</h1>
+<h1>顺便记录下绑定了域名后初始化的几个建议选项</h1>
 <h2>1. 自动证书模式</h2>
 <p>SSL/TLC - Overview - SSL/TLS encryption - Configure - Automatic SSL/TLS (default) - Select - Save</p>
-<h2>2. 强制使用 HTTPS</h2>
-<p>SSL/TLC - Edge Certificates - Always use HTTPS</p></div>
+<h2>2. 强制使用 HTTPS + HSTS</h2>
+<p>SSL/TLC - Edge Certificates - Always use HTTPS<br>
+HTTP Strict Transport Security (HSTS) - Enable HSTS（非必要）</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>

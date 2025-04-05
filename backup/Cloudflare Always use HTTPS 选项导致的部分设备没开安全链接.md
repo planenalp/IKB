@@ -12,9 +12,10 @@
 SSL/TLC - Edge Certificates - Always use HTTPS
 
 -----------------------------------------------------------------------------
-# 顺便记录下绑定了域名后初始化的两个建议选项
+# 顺便记录下绑定了域名后初始化的几个建议选项
 ## 1. 自动证书模式
 SSL/TLC - Overview - SSL/TLS encryption - Configure - Automatic SSL/TLS (default) - Select - Save
 
-## 2. 强制使用 HTTPS
+## 2. 强制使用 HTTPS + HSTS
 SSL/TLC - Edge Certificates - Always use HTTPS
+HTTP Strict Transport Security (HSTS) - Enable HSTS（非必要）
